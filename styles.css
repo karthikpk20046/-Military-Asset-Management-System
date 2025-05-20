@@ -1,0 +1,44 @@
+/* styles.css */
+.sidebar {
+    transition: all 0.3s ease;
+}
+.sidebar.collapsed {
+    width: 70px;
+}
+.sidebar.collapsed .nav-text {
+    display: none;
+}
+.sidebar.collapsed .logo-text {
+    display: none;
+}
+.sidebar.collapsed .nav-item {
+    justify-content: center;
+}
+.content {
+    transition: margin-left 0.3s ease;
+}
+.modal {
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+.chart-container {
+    height: 300px;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        z-index: 100;
+        left: -250px;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+    .content {
+        margin-left: 0 !important;
+    }
+}
